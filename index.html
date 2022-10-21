@@ -10,8 +10,228 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://cdn.lordicon.com/pzdvqjsp.js"></script>
+    <script>
+        var loader = document.getElementById('loader'),
+    load = document.getElementById('loading'),
+    myTime,
+    newTime = 0;
+
+function loading() {
+    'use strict';
+
+    newTime = newTime + 1;
+
+    if (newTime > 100) {
+        newTime = 0;
+        // load.style.transition = '1s all';
+        // load.style.opacity = '0';
+        // clearInterval(myTime);
+    } else {
+        loader.textContent = newTime + "%";
+    }
+}
+
+myTime = setInterval(loading, 200);
+    </script>
+    <style>
+    .loader-center{
+    background-color: dodgerblue !important; 
+    position: absolute !important; 
+    left: 0 !important;
+    right: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.loader-list{
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    margin: -90px 0 0 -80px !important; 
+}
+
+
+.loader{
+    position: absolute !important;
+    top: 80px !important;
+    left: 65px !important;
+    color: white !important;
+    border-radius: 50% !important;
+    transition: 1s all !important;
+}
+
+.loader-top{
+    position: absolute !important;
+    border: 5px solid transparent !important;
+    border-top-color: white !important;
+    border-radius: 50% !important;
+    -webkit-animation: loading linear infinite !important;
+    -moz-animation: loading linear infinite !important;
+    -o-animation: loading linear infinite !important;
+    animation: loading linear infinite !important; 
+}
+
+.loader-bottom{
+    position: absolute!important;
+    border: 5px solid transparent !important;
+    border-bottom-color: white !important;
+    border-radius: 50% !important;
+    -webkit-animation: loading linear infinite;
+    -moz-animation: loading linear infinite;
+    -o-animation: loading linear infinite;
+    animation: loading linear infinite; 
+}
+
+.loader-top.one{
+    top: 24px !important;
+    left: 15px !important;
+    width: 120px!important;
+    height: 120px!important;
+    animation-duration: 1s!important;
+}
+.loader-top.two{
+    top: 37px;
+    left: 30px;
+    width: 90px;
+    height: 90px;
+    animation-duration: 1.2s;
+}
+.loader-top.three{
+    top: 50px;
+    left: 40px;
+    width: 70px;
+    height: 70px;
+    animation-duration: 1.4s;
+}
+.loader-top.four{
+    top: 64px;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    animation-duration: 1.6s;
+}
+
+.loader-bottom.one{
+    top: 23px;
+    left: 15px;
+    width: 120px;
+    height: 120px;
+    animation-duration: 1s;
+}
+.loader-bottom.two{
+    top: 42px;
+    left: 30px;
+    width: 90px;
+    height: 90px;
+    animation-duration: 1.2s;
+}
+.loader-bottom.three{
+    top: 51px;
+    left: 40px;
+    width: 70px;
+    height: 70px;
+    animation-duration: 1.4s;
+}
+.loader-bottom.four{
+    top: 59px;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    animation-duration: 1.6s;
+}
+
+@-webkit-keyframes loading {
+    from{
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+    }
+    to{
+        -webkit-transform: rotateZ(0);
+        -moz-transform: rotateZ(0);
+        -ms-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+}
+
+@-moz-keyframes loading {
+    from{
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+    }
+    to{
+        -webkit-transform: rotateZ(0);
+        -moz-transform: rotateZ(0);
+        -ms-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+}
+
+@-ms-keyframes loading {
+    from{
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+    }
+    to{
+        -webkit-transform: rotateZ(0);
+        -moz-transform: rotateZ(0);
+        -ms-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+}
+
+@-ms-keyframes loading {
+    from{
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+    }
+    to{
+        -webkit-transform: rotateZ(0);
+        -moz-transform: rotateZ(0);
+        -ms-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+}
+
+@keyframes loading {
+    from{
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+    }
+    to{
+        -webkit-transform: rotateZ(0);
+        -moz-transform: rotateZ(0);
+        -ms-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+}
+    </style>
 </head>
 <body>
+     <div class="loader-center" id="loading">
+            <div class="loader-list">
+                <div class="one loader-top"></div>
+                <div class="two loader-top"></div>
+                <div class="three loader-top"></div>
+                <div class="four loader-top"></div>
+                <div class="loader" id="loader">0%</div>
+                <div class="one loader-bottom"></div>
+                <div class="two loader-bottom"></div>
+                <div class="three loader-bottom"></div>
+                <div class="four loader-bottom"></div>
+            </div>
+        </div>
     <div class="container-fluid d-flex justify-content-center align-items-center" style="background-image:url('image/rose.jpg.jpg') !important; height: 100vh!important; background-attachment: fixed  !important; background-repeat: no-repeat!important;background-size: cover!important;">
      <!-- height:500px !important; background-repeat: no-repeat !important; background-size: cover !important; background-attachment: fixed !important; " --> 
         <div class="text-light">
